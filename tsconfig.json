@@ -1,0 +1,27 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "types": [
+            "es6-shim",
+            "angular",
+            "jquery"
+        ],
+        "sourceMap": true,
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "strictNullChecks": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "rootDir": "src"
+    }
+}

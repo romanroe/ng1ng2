@@ -1,0 +1,36 @@
+{
+  "name": "ng1ng2",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@types/angular": "1.6.21",
+    "@types/es6-shim": "0.31.34",
+    "@types/jquery": "2.0.48",
+    "@types/lodash": "4.14.72",
+    "extract-loader": "0.1.0",
+    "extract-text-webpack-plugin": "2.1.0",
+    "file-loader": "0.11.1",
+    "html-loader": "0.4.5",
+    "ng-annotate-loader": "0.6.1",
+    "script-loader": "0.7.0",
+    "source-map-support": "0.4.15",
+    "ts-loader": "2.3.2",
+    "ts-node": "3.3.0",
+    "tslint": "3.15.1",
+    "typescript": "2.4.2",
+    "uglify-js": "2.8.27",
+    "uglifyjs-webpack-plugin": "0.4.3",
+    "watch-run": "1.2.5",
+    "webpack": "3.0.0",
+    "webpack-dev-server": "2.5.0"
+  },
+  "dependencies": {
+    "angular": "1.6.5",
+    "es6-shim": "0.35.3",
+    "lodash": "4.17.4"
+  },
+  "scripts": {
+    "dev": "webpack --env.development",
+    "watch": "webpack-dev-server --env.development",
+    "dist": "webpack"
+  }
+}
