@@ -24,9 +24,16 @@
     "webpack-dev-server": "2.5.0"
   },
   "dependencies": {
+    "@angular/common": "^4.4.4",
+    "@angular/compiler": "^4.4.4",
+    "@angular/core": "^4.4.4",
+    "@angular/platform-browser": "^4.4.4",
+    "@angular/platform-browser-dynamic": "^4.4.4",
+    "@angular/upgrade": "^4.4.4",
     "angular": "1.6.5",
     "es6-shim": "0.35.3",
-    "lodash": "4.17.4"
+    "lodash": "4.17.4",
+    "rxjs": "^5.4.3"
   },
   "scripts": {
     "dev": "webpack --env.development",

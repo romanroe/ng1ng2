@@ -12,7 +12,9 @@ require("./app/serviceX");
 require("./app/serviceA");
 require("./app/serviceB");
 
+require("./app/app.module");
 
-angular.bootstrap(document, ["ng1ng2"], {strictDi: true});
+// angular.bootstrap(document, ["ng1ng2"], {strictDi: true});
+
 
 

@@ -21,7 +21,10 @@ module.exports = function (env) {
         },
         resolve: {
             extensions: ['.ts', '.tsx', '.js'],
-            modules: ["node_modules", "bower_components"]
+            modules: ["node_modules", "bower_components"],
+            // alias: {
+            //     '@angular/upgrade/static': '@angular/upgrade/bundles/upgrade-static.umd.js'
+            // }
         },
         module: {
             rules: [{
@@ -75,17 +78,7 @@ module.exports = function (env) {
             port: 9999,
             overlay: true,
             host: "0.0.0.0",
-            disableHostCheck: true,
-            proxy: {
-                "/a/spec_editor_endpoint": {
-                    target: "http://localhost:8080",
-                    ws: true,
-                    secure: false
-                },
-                "/a/": {
-                    target: "http://localhost:8080"
-                }
-            }
+            disableHostCheck: true
         }
     } else {
         config.plugins.push(new UglifyJSPlugin({comments: false}));
