@@ -2,14 +2,18 @@ import {IDirective, IScope} from "angular";
 import {appModule} from "../index";
 import {ServiceA} from "./serviceA";
 import {ServiceX} from "./serviceX";
+import {ServiceB} from "./serviceB";
 
 class Directive2Controller {
 
     value1 = this.serviceX.methodX();
     value2 = this.serviceA.methodA();
+    value3 = this.serviceB.methodB();
 
     /*@ngInject*/
-    constructor(private serviceX: ServiceX, private serviceA: ServiceA) {
+    constructor(private serviceX: ServiceX,
+                private serviceA: ServiceA,
+                private serviceB: ServiceB) {
     }
 }
 
