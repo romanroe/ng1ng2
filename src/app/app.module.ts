@@ -1,6 +1,6 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 import {UpgradeModule} from "@angular/upgrade/static";
 
 @NgModule({
@@ -18,6 +18,5 @@ export class AppModule {
     }
 }
 
-console.log(11);
-// platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowserDynamic().bootstrapModule(AppModule);
 

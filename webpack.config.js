@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require("webpack");
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -22,9 +23,10 @@ module.exports = function (env) {
         resolve: {
             extensions: ['.ts', '.tsx', '.js'],
             modules: ["node_modules", "bower_components"],
-            // alias: {
-            //     '@angular/upgrade/static': '@angular/upgrade/bundles/upgrade-static.umd.js'
-            // }
+            alias: {
+                // '@angular/upgrade/static': '@angular/upgrade/bundles/upgrade-static.umd.js',
+                // "@angular/core": "@angular/core/bundles/core.umd.js"
+            }
         },
         module: {
             rules: [{
@@ -34,7 +36,7 @@ module.exports = function (env) {
                 test: /\.css$/,
                 use: extractCss.extract({use: [{loader: "css-loader"}]})
             }, {
-                test: /\.[tj]sx?$/, loader: 'ng-annotate-loader'
+                test: /src.*\.[tj]sx?$/, loader: 'ng-annotate-loader'
             }, {
                 test: /\.tsx?$/, loader: 'ts-loader'
             }, {
@@ -66,6 +68,10 @@ module.exports = function (env) {
             }]
         },
         plugins: [
+            new webpack.ContextReplacementPlugin(
+                /angular([\\\/])core/,
+                path.resolve(__dirname, '../src')
+            ),
             extractCss
         ]
     };

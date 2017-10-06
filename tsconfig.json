@@ -8,16 +8,19 @@
             "node_modules/@types"
         ],
         "types": [
-            "es6-shim",
+//            "es6-shim",
             "angular",
             "jquery"
+        ],
+        "lib": [
+            "es2015", "dom"
         ],
         "sourceMap": true,
         "noEmitOnError": true,
         "noImplicitAny": true,
         "removeComments": false,
         "preserveConstEnums": true,
-        "strictNullChecks": true,
+        "strictNullChecks": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "noImplicitReturns": true,

@@ -12,9 +12,7 @@ require("./app/serviceX");
 require("./app/serviceA");
 require("./app/serviceB");
 
+require("zone.js");
+require("reflect-metadata");
 require("./app/app.module");
-
-// angular.bootstrap(document, ["ng1ng2"], {strictDi: true});
-
-
 

@@ -31,9 +31,12 @@
     "@angular/platform-browser-dynamic": "^4.4.4",
     "@angular/upgrade": "^4.4.4",
     "angular": "1.6.5",
+    "core-js": "^2.5.1",
     "es6-shim": "0.35.3",
     "lodash": "4.17.4",
-    "rxjs": "^5.4.3"
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.4.3",
+    "zone.js": "^0.8.18"
   },
   "scripts": {
     "dev": "webpack --env.development",
