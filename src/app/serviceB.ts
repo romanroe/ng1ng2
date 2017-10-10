@@ -1,6 +1,5 @@
-
-import {appModule} from "../index";
 import {ServiceX} from "./serviceX";
+import {angular1Module} from "./app_v1.module";
 
 let counter = 0;
 
@@ -18,4 +17,4 @@ export class ServiceB {
 
 }
 
-appModule.service("serviceB", ServiceB);
+angular1Module.service("serviceB", ServiceB);

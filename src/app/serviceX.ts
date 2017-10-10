@@ -1,5 +1,5 @@
 
-import {appModule} from "../index";
+import {angular1Module} from "./app_v1.module";
 
 export class ServiceX {
 
@@ -9,4 +9,12 @@ export class ServiceX {
 
 }
 
-appModule.service("serviceX", ServiceX);
+angular1Module.service("serviceX", ServiceX);
+
+
+
+export const serviceXProvider = {
+    provide: ServiceX,
+    deps: ["$injector"],
+    useFactory: (i: any) => i.get("serviceX")
+};

@@ -1,6 +1,5 @@
-
-import {appModule} from "../index";
 import {ServiceX} from "./serviceX";
+import {angular1Module} from "./app_v1.module";
 
 class Controller1 {
 
@@ -12,4 +11,4 @@ class Controller1 {
 
 }
 
-appModule.controller("Controller1", Controller1);
+angular1Module.controller("Controller1", Controller1);

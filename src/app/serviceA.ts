@@ -1,15 +1,16 @@
-
-import {appModule} from "../index";
+import {Injectable} from "@angular/core";
 import {ServiceX} from "./serviceX";
 
 let counter = 0;
 
+@Injectable()
 export class ServiceA {
 
     private counter = counter++;
 
     /*@ngInject*/
     constructor(private serviceX: ServiceX) {
+        console.log("constructor ServiceA");
     }
 
     methodA() {
@@ -18,4 +19,4 @@ export class ServiceA {
 
 }
 
-appModule.service("serviceA", ServiceA);
+// angular1Module.service("serviceA", ServiceA);
