@@ -3,8 +3,9 @@ import {ServiceX} from "./serviceX";
 import {ServiceA} from "./serviceA";
 import {ServiceB} from "./serviceB";
 import {angular1Module} from "./app_v1.module";
-import {Directive, ElementRef, Injector} from "@angular/core";
+import {AfterViewInit, Directive, ElementRef, Injector, ViewChild} from "@angular/core";
 import {UpgradeComponent} from "@angular/upgrade/static";
+import * as $ from "jquery";
 
 
 class Directive1Controller {
@@ -38,8 +39,14 @@ angular1Module.directive("directive1", directive1);
     selector: "directive1"
 })
 export class Directive1Upgraded extends UpgradeComponent {
+
+    @ViewChild("directive1")
+    child: Directive1Controller;
+
+
     constructor(elementRef: ElementRef, injector: Injector, serviceA: ServiceA) {
         super("directive1", elementRef, injector);
-
     }
+
 }
+

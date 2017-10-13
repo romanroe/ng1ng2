@@ -1,24 +1,25 @@
 import {Component, ElementRef} from "@angular/core";
 import {downgradeComponent} from "@angular/upgrade/static";
+import * as $ from "jquery";
 import {angular1Module} from "./app_v1.module";
 import {ServiceA} from "./serviceA";
 import {ServiceX} from "./serviceX";
-import * as $ from "jquery";
+
+
+declare const require:any;
+function template(url: string) {
+    return require("!!raw-loader!./" + url);
+}
+
 
 @Component({
     selector: "wrapper",
     providers: [ServiceA],
-    template: `
-        <directive1></directive1>
-    `
+    template: template("Wrapper.component.html")
 })
 export class WrapperComponent {
 
     constructor(elementRef: ElementRef, serviceX: ServiceX, serviceA: ServiceA) {
-        let native = $(elementRef.nativeElement);
-        native.data("key", "value");
-
-        console.log(native.data("key"));
     }
 
 }
